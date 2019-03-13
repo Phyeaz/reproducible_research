@@ -1,8 +1,10 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
+title: "Reproducible Research"
+author: John Doe
+date: March 22, 2005
+output:
+  md_document:
+    variant: markdown_github
 ---
 
 #Assignment For Week 2
@@ -59,7 +61,7 @@ ggplot(totalsteps,aes(date,steps,fill=steps))+
 
 The Mean across all days
 
-median(totalsteps$steps,na.rm = TRUE)
+
 ```{r 2222 }
 mean(totalsteps$steps,na.rm = TRUE)
 ```
