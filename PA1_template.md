@@ -67,7 +67,7 @@ interval <- activityL %>%group_by(interval) %>%
   summarise(mean=mean(steps,na.rm = TRUE))
 
 ggplot(interval,aes(interval,mean))+
-  geom_line(size=1.2,color="darkblue")+
+  geom_line(color="darkblue")+
   labs(x="Interval",y="Averaged across all days") +
   ggtitle("Daily Activity Pattern")
 ```
@@ -170,7 +170,7 @@ interval2 <- activityL2 %>%group_by(interval,week) %>%
 
 
 ggplot(interval2,aes(interval,mean,col=week))+
-  geom_line(size=1.2)+
+  geom_line()+
   labs(x="Interval",y="Averaged across all days") +
   ggtitle("Daily Activity Pattern")+
   facet_wrap(~week,nrow = 2)
